@@ -13,7 +13,7 @@ pipeline {
     }
 
     evnironment {
-        IMAGE_NAME = 'amalkoc/twn-demo-app:aws-web-app-1.0'
+        IMAGE_NAME = 'amalkoc/twn-demo-app:java-maven-3.0'
     }
 
     stages {
