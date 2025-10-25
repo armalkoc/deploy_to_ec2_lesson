@@ -34,7 +34,7 @@ pipeline {
             steps {
                 script {
                     echo "Deploying Docker Image to EC2 instance"
-                    def dockerCmd = 'docker run -d -p 8080:8080 --name my-web-app amalkoc/twn-demo-app:aws-web-app-1.0'
+                    def dockerCmd = 'docker run -d -p 8080:8080 --name my-web amalkoc/twn-demo-app:aws-web-app-1.0'
                     sshagent(['ec2-server-key']) {
                         sh "ssh -o StrictHostKeyChecking=no ec2-user@54.93.231.146 ${dockerCmd}"
                     }
