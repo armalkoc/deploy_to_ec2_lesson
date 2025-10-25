@@ -1,9 +1,5 @@
 #!/usr/bin/env groovy
-library (identifier: 'aws-shared-library@main', retriever: modernSCM(
-    [$class: GitSCMSource,
-    remote:'https://github.com/armalkoc/aws-shared-library.git',
-    credentialsId: 'github-am'])
-)
+@Library('aws-shared-library')_
 
 pipeline {
     agent any
