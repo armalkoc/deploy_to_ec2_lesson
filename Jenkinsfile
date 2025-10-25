@@ -12,7 +12,7 @@ pipeline {
         maven 'maven-3.9'
     }
 
-    evnironment {
+    environment {
         IMAGE_NAME = 'amalkoc/twn-demo-app:java-maven-3.0'
     }
 
