@@ -9,7 +9,7 @@ pipeline {
     }
 
     environment {
-        IMAGE_NAME = 'amalkoc/twn-demo-app:java-maven-3.0'
+        IMAGE_NAME = 'amalkoc/twn-demo-app:java-maven-5.0'
     }
 
     stages {
