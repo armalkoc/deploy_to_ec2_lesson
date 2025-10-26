@@ -8,9 +8,10 @@ pipeline {
         maven 'maven-3.9'
     }
 
- //   environment {
+    environment {
+        repository = 'amalkoc/twn-demo-app'
  //       IMAGE_NAME = 'amalkoc/twn-demo-app:java-maven-5.0'
- //   }
+    }
 
     stages {
         stage("Incrementing App Version") {
@@ -23,7 +24,7 @@ pipeline {
                     
                     def matcher = readFile('pom.xml') =~ '<version>(.+)</version>'
                     def version = matcher[0][1]
-                    env.IMAGE_NAME = "$version-$BUILD_NUMBER"
+                    env.IMAGE_NAME = "$repository/$version-$BUILD_NUMBER"
                 }
             }
         }
